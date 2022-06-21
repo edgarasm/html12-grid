@@ -14,10 +14,34 @@
   padding-bottom: 2%;
 }
 
+.fname {
+  grid-area: fname;
+}
+.lname {
+  grid-area: lname;
+}
+.email {
+  grid-area: email;
+}
+.subject {
+  grid-area: subject;
+}
+.message {
+  grid-area: message;
+}
+.button {
+  grid-area: button;
+}
 .form-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 15px;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-areas:
+    "fname lname"
+    "email email"
+    "subject subject"
+    "message message"
+    "button .";
 }
 .form-grid label {
   display: block;
@@ -25,13 +49,14 @@
   font-size: 0.8em;
   padding-bottom: 1em;
 }
+
 .form-grid input {
   width: 100%;
   border: none;
   border-radius: 5px;
   min-height: 30px;
 }
-.grid {
+/* .grid {
   width: 100%;
   grid-column: span 1;
 }
@@ -43,7 +68,7 @@
 }
 .grid.message {
   grid-column: span 2;
-}
+} */
 .message textarea {
   width: 100%;
   min-height: 100px;
